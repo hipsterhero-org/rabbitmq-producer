@@ -1,0 +1,5 @@
+com\herokurabbit\service\RabbitMQSender.class
+com\herokurabbit\SpringBootHelloWorldApplication.class
+com\herokurabbit\controller\RabbitMQWebController.class
+com\herokurabbit\config\RabbitMQConfig.class
+com\herokurabbit\model\Account.class

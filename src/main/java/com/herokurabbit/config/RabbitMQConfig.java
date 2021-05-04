@@ -25,6 +25,9 @@ public class RabbitMQConfig {
 
 	@Value("${heroku.rabbitmq.routingkey}")
 	private String routingkey;
+	
+	@Value("${heroku.rabbitmq.uri}")
+	private String rabbitUri;
 
 	@Bean
 	Queue queue() {
@@ -49,7 +52,7 @@ public class RabbitMQConfig {
 	@Bean
 	public ConnectionFactory connection() {
 		CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
-		connectionFactory.setUri("amqps://lqaekayw:EhmHDkP3Y3tiEBHGXFcqWsdrHQU4DcUp@whale.rmq.cloudamqp.com/lqaekayw");
+		connectionFactory.setUri(rabbitUri);
 		return connectionFactory;
 	}
 
